@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ychanger</title>
+    <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main style="background-image:url('{% static 'images/background.png' %}')">
+        <header>
+            <p class="logo">
+                <img src="{% static 'images/convert.png' %}" alt="" class="logo-img">
+                ychanger
+            </p>
+            <button id="open" class="burger-btn"><span></span><span></span><span></span></button>
+            <div class="navigation">
+                <a href="">Главная</a>
+                <a href="#pravila">Правила</a>
+                <a href="#kurs">Курс</a>
+                <a href=""><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </header>
+        <div class="convert-section section">
+            <div class="convert-info">
+                <p>Обмен криптовалют</p>
+                <h1>YCHANGER.PRO</h1>
+            </div>
+            <form class="form" method="post">
+                {% csrf_token %}
+                <p class="form-title">Введите данные обмена</p>
+                <div class="form-item">
+                    <p>Отдаете:</p>
+                        <select>
+                            <option selected value="">Bitcoin</option>
+                            <option value="">Ethereum</option>
+                        </select>
+                </div>
+                <div class="form-item">
+                    <p>Получаете:</p>
+                    <select>
+                        <option  value="">Bitcoin</option>
+                        <option selected value="">Ethereum</option>
+                    </select>
+                </div>
+                <input placeholder="Введите свой телеграм" type="text">
+                <button>Создать заявку</button>
+            </form>
+        </div>
+        <div class="section text-info">
+            <div class="text-wrapper" id="pravila">
+                <p>Приветствуем на сайте обменного пункта! Обменник предлагает обмен криптовалют биткоин и эфириум без AML и KYC проверки!</p>
+                <br>
+                <h3><b>Наши услуги стоят 30% от Вашего объема вносимых средств.</b></h3>
+                <br>
+                <div id="open-text" class="adaptiveView">читадь далее...</div>
+                <p id="text" class="adaptive-text">
+                    Обменник гарантирует чистоту AML в 10-20 процентов гарантируя безопасность и анонимность операций без KYC регистрации. Наша чистота AML гарантирует прием вашей криптовалюты любыми биржами мира включая Binance USA и частные криптообменники USA! Чистый AML и мгновенные выплаты гарантируют моментальное получение средств, обеспечивая максимальный комфорт для пользователей. Получение криптовалют нами происходит всегда на новый кошелек.  NO AML & KYC - мы принимаем любые ваши средства, полностью анонимный обмен. Вы получаете чистый 100% Биткоин или Эфириум. Приготовьте новый чистый кошелек перед обменом.  Данная операция производится в автоматическом режиме. Как только мы получим средства, заявка сразу будет отправлена на выплату Вам средств. Для удобства и новичков выбран минимальный порог входа. Пн.-Пт. с 8 :00 до 22 :00 по мск  Сб.-Вс. свободный график.
+<br><br>
+У нас не миксер криптовалют т.к. это видят биржи мы используем прерывание вашей транзакции и выплату чистой криптовалюты Вам на кошелек.
+                </p>
+            </div>
+        </div>
+        <div class="course section" id="kurs">
+            <h2>Курс</h2>
+            <div class="course-items">
+                <div class="course-item">
+                    <img src="{% static 'images/btc.png' %}" alt="">
+                    <div class="course-text">
+                        <p class="name">
+                            Bitcoin
+                        </p>
+                        <p class="desc">
+                            {{ btc }}
+<!--                            <br>-->
+<!--                            Follow-->
+<!--                            {{ eth }}today-->
+                        </p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <img src="{% static 'images/eth.png' %}" alt="">
+                    <div>
+                        <p class="name">
+                            Ethereum
+                        </p>
+                        <p class="desc">
+                            {{ eth }}
+<!--                            <br>-->
+<!--                            Follow-->
+<!--                            +50,751.09 (0.81%)today-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fast-feedback section">
+            <h2>Создайте быстро заявку</h2>
+            <div class="fast-items">
+                <div class="fast-item">
+                    <div class="round"><img src="{% static 'images/round.png' %}" alt=""></div>
+                    <p>Выберете направление обмена</p>
+                </div>
+                <div class="fast-item">
+                    <div class="round"><img src="{% static 'images/icon1.png' %}" alt=""></div>
+                    <p>Введите данные</p>
+                </div>
+                <div class="fast-item">
+                    <div class="round"><img src="{% static 'images/icon2.png' %}" alt=""></div>
+                    <p>Нажмите кнопку “создать заявку”</p>
+                </div>
+            </div>
+        </div>
+        <div class="advatages section">
+            <h2>Преимущество</h2>
+            <div class="advantage-items">
+                <div class="advantage-item">
+                    <img src="{% static 'images/icon3.png' %}" alt="">
+                    <p>Надежная команда разработчиков</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="{% static 'images/icon4.png' %}" alt="">
+                    <p>Без регистрации и аккаунтов</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="{% static 'images/icon5.png' %}" alt="">
+                    <p>Быстро и безопасно.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="footer-copy">© 2024 YCHANGE.PRO официальный сайт</p>
+            <p class="logo">
+                <img src=" {% static 'images/convert.png' %}" alt="" class="logo-img">
+                ychanger
+            </p>
+            <div class="navigation">
+                <a href="">Главная</a><a href="#pravila">Правила</a><a href="#kurs">Курс</a>
+            </div>
+        </footer>
+    </main>
+    <div class="burger-wrapper">
+        <div class="burger">
+            <button id="close" class="burger-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.0161 0.571699C18.4067 0.181179 19.0397 0.181179 19.4303 0.571699C19.8208 0.962232 19.8208 1.59539 19.4303 1.98591L11.4164 9.99977L19.4303 18.0136C19.8208 18.4042 19.8208 19.0374 19.4303 19.4279C19.0397 19.8184 18.4067 19.8184 18.0161 19.4279L10.0021 11.414L1.98836 19.4278C1.93955 19.4767 1.88694 19.5194 1.83148 19.556C1.44334 19.8123 0.915857 19.7695 0.57415 19.4278C0.183617 19.0374 0.183617 18.4042 0.57415 18.0136L8.588 9.99977L0.57415 1.98598C0.18363 1.59546 0.18363 0.962285 0.57415 0.571765C0.96467 0.181245 1.59784 0.181245 1.98836 0.571765L10.0021 8.58563L18.0161 0.571699Z" fill="#ffffff"/>
+                </svg>
+            </button>
+            <div class="navigation">
+                <a href="">Главная</a>
+                <a href="">Правила</a>
+                <a href="">Контакты</a>
+                <a href=""><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
