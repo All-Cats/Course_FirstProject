@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from blog.models import RequestForm
+
+
+@admin.register(RequestForm)
+class RequestFormAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'give_currency',
+        'get_currency',
+        'telegram',
+    )
