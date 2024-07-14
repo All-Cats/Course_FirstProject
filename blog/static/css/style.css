@@ -119,6 +119,8 @@ header {
     color: white;
 }
 
+
+
 .form-item select {
     background: #ffffff url('./images/select01.png') no-repeat right 10px center;
     border-radius: 10px;
@@ -382,6 +384,13 @@ text-align: center;
 
 }
 
+
+.adaptive{
+    display: none;
+}
+
+
+
 .adaptiveView {
     display: none;
     color: #121df7 ;
@@ -396,9 +405,10 @@ text-align: center;
         display: flex;
         background-color: transparent;
         gap: 4px;
+        justify-content: space-between;
         flex-direction: column;
-        width: 32px;
-        height: 32px;
+        width: 50px;
+        height: 50px;
         padding: 8px 4px;
         border: none;
         cursor: pointer;
@@ -407,9 +417,9 @@ text-align: center;
     .burger-btn span {
         display: block;
         width: 100%;
-        height: 2px;
+        height: 4px;
         border-radius: 10px;
-        background-color: #000000;
+        background-color: #ffffff;
     }
     .burger-wrapper {
         display: none;
@@ -508,8 +518,7 @@ text-align: center;
     .form-item select {
         height: 60px;
         font-size: 20px;
-        background: #D9D9D9 url('./images/select.png') no-repeat right 10px center;
-        background-size: 20px auto;
+        background-size: 40px auto !important;
 
     }
 
@@ -541,6 +550,11 @@ text-align: center;
     /* .convert-info {
 
     } */
+
+    .adaptive{
+        display: flex;
+    }
+
     .convert-info p {
         font-size: 35px;
     }

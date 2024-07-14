@@ -44,14 +44,14 @@
             <p class="form-title">Введите данные обмена</p>
             <div class="form-item">
                 <p>Отдаете:</p>
-                <select name="give_currency">
+                <select name="give_currency" style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
                     <option selected value="Bitcoin">Bitcoin</option>
                     <option value="Ethereum">Ethereum</option>
                 </select>
             </div>
             <div class="form-item">
                 <p>Получаете:</p>
-                <select name="get_currency">
+                <select name="get_currency" style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
                     <option value="Bitcoin">Bitcoin</option>
                     <option selected value="Ethereum">Ethereum</option>
                 </select>
@@ -170,10 +170,10 @@
                       fill="#ffffff"/>
             </svg>
         </button>
-        <div class="navigation">
+        <div class="navigation adaptive">
             <a href="">Главная</a>
-            <a href="">Правила</a>
-            <a href="">Контакты</a>
+            <a href="#pravila">Правила</a>
+            <a href="#kurs">Курс</a>
             <a href=""><i class="fab fa-telegram-plane"></i></a>
         </div>
     </div>
