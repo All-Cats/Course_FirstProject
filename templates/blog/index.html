@@ -56,7 +56,7 @@
                     <option selected value="Ethereum">Ethereum</option>
                 </select>
             </div>
-            <input placeholder="Введите свой телеграм" type="text" name="telegram_login" required>
+            <input placeholder="Введите свой телеграм или почту" type="text" name="telegram_login" required>
             <button type="submit" onclick="send_form()">Создать заявку</button>
         </form>
     </div>
@@ -151,8 +151,11 @@
             </div>
         </div>
     </div>
+    <div class="mail">
+        <p class="mail-item">MAIL</p>
+    </div>
     <footer>
-        <p class="footer-copy">© 2024 YCHANGE.PRO официальный сайт</p>
+        <p class="footer-copy">© 2024 YACHANGER.PRO официальный сайт</p>
         <p class="logo">
             <img src=" {% static 'images/convert.png' %}" alt="" class="logo-img">
             yachanger
@@ -161,6 +164,7 @@
             <a href="">Главная</a><a href="#pravila">Правила</a><a href="#kurs">Курс</a>
         </div>
     </footer>
+
 </main>
 <div class="burger-wrapper">
     <div class="burger">
