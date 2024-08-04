@@ -13,11 +13,20 @@
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <script>
         function send_form() {
             alert("Заявка отправлена!")
         }
+          function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
     </script>
+
+
+
+
 
 </head>
 <body>
@@ -78,7 +87,8 @@
             </div>
             <input placeholder="Введите свой телеграм или почту" type="text" name="telegram_login" required>
             {{captcha_form.as_p}}
-            <button type="submit" onclick="send_form()">Создать заявку</button>
+            <button type="submit" class="g-recaptcha"  data-sitekey="reCAPTCHA_site_key"  data-callback='onSubmit'
+        data-action='submit' onclick="send_form()">Создать заявку</button>
         </form>
     </div>
     <div class="section text-info">
