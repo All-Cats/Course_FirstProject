@@ -18,8 +18,28 @@
             alert("Заявка отправлена!")
         }
     </script>
+
 </head>
 <body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(97986083, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+
+<noscript><div><img src="https://mc.yandex.ru/watch/97986083" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <main style="background-image:url('{% static 'images/background.png' %}')">
     <header>
         <p class="logo">
@@ -57,6 +77,7 @@
                 </select>
             </div>
             <input placeholder="Введите свой телеграм или почту" type="text" name="telegram_login" required>
+            {{captcha_form.as_p}}
             <button type="submit" onclick="send_form()">Создать заявку</button>
         </form>
     </div>
