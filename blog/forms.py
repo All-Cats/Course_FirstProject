@@ -4,4 +4,4 @@ from django_recaptcha.widgets import ReCaptchaV3
 
 
 class FormWithCaptcha(forms.Form):
-    captcha = ReCaptchaField(widget=ReCaptchaV3(action='login'))
+    captcha = ReCaptchaField()
