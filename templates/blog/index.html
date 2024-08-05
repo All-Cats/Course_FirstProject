@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,40 +14,45 @@
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-     <script src="https://www.google.com/recaptcha/api.js"></script>
-
     <script>
         function send_form() {
             alert("Заявка отправлена!")
         }
-          function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
+
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
     </script>
-
-
-
-
 
 </head>
 <body>
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+                return;
+            }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(97986083, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
+    ym(97986083, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+    });
 </script>
 
-<noscript><div><img src="https://mc.yandex.ru/watch/97986083" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/97986083" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 
 <main style="background-image:url('{% static 'images/background.png' %}')">
@@ -73,22 +79,25 @@
             <p class="form-title">Введите данные обмена</p>
             <div class="form-item">
                 <p>Отдаете:</p>
-                <select name="give_currency" style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
+                <select name="give_currency"
+                        style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
                     <option selected value="Bitcoin">Bitcoin</option>
                     <option value="Ethereum">Ethereum</option>
                 </select>
             </div>
             <div class="form-item">
                 <p>Получаете:</p>
-                <select name="get_currency" style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
+                <select name="get_currency"
+                        style="background: #ffffff url({% static './images/select01.png' %}) no-repeat right 10px center;">
                     <option value="Bitcoin">Bitcoin</option>
                     <option selected value="Ethereum">Ethereum</option>
                 </select>
             </div>
             <input placeholder="Введите свой телеграм или почту" type="text" name="telegram_login" required>
-            {{captcha_form.as_p}}
-            <button type="submit" class="g-recaptcha"  data-sitekey="reCAPTCHA_site_key"  data-callback='onSubmit'
-        data-action='submit' onclick="send_form()">Создать заявку</button>
+            {{ captcha_form.as_p }}
+            <button type="submit" class="g-recaptcha" data-sitekey="6LfXpR4qAAAAALaSCaTQxf2zz7gRvNz9Suvvj9Le" data-callback='onSubmit'
+                    data-action='submit' onclick="send_form()">Создать заявку
+            </button>
         </form>
     </div>
     <div class="section text-info">

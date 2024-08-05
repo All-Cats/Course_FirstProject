@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import RequestForm
 from .forms import FormWithCaptcha
 
+
 def index(request):
     captcha_form = FormWithCaptcha()
     if request.method == "POST":
@@ -12,4 +13,6 @@ def index(request):
         )
         return redirect('index')
 
-    return render(request, "blog/index.html", context={"captcha_form":captcha_form})
+    return render(request, "blog/index.html", context={
+        "captcha_form": captcha_form
+    })
