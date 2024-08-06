@@ -6,4 +6,4 @@ static
 venv/
 db.sqlite3
 *.sock
-**/__pycache__/
+!**/__pycache__/
