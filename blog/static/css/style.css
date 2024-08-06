@@ -1,7 +1,7 @@
 @media (max-width: 575.98px) {
     .g-recaptcha {
-        transform:scale(0.75);
-        transform-origin:0 0;
+        transform: scale(0.75);
+        transform-origin: 0 0;
     }
 }
 
@@ -98,7 +98,7 @@ header {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 32px ;
+    gap: 32px;
 }
 
 .form-title {
@@ -116,7 +116,7 @@ header {
     gap: 25px;
 }
 
-.form-item p {
+.form-item p, label {
     font-family: Roboto;
     font-size: 30px;
     font-weight: 400;
@@ -124,7 +124,6 @@ header {
     text-align: left;
     color: white;
 }
-
 
 
 .form-item select {
@@ -155,11 +154,13 @@ header {
     line-height: 33.98px;
     text-align: left;
     color: black;
-    padding:0 20px ;
+    padding: 0 20px;
 }
+
 .form input::placeholder {
     color: rgb(78, 74, 74);
 }
+
 .form button {
     background-color: #FFC701;
     border-radius: 10px;
@@ -177,8 +178,8 @@ header {
 }
 
 .form button:hover {
-/* color: #24c924; */
-background-color: #24c924;
+    /* color: #24c924; */
+    background-color: #24c924;
 }
 
 .course {
@@ -365,6 +366,7 @@ footer {
 .logo {
     color: white;
 }
+
 .burger-btn {
     display: none;
 }
@@ -383,23 +385,22 @@ footer {
     padding: 30px;
     color: #FFFFFF;
     font-family: Roboto;
-font-size: 30px;
-font-weight: 400;
-line-height: 35.16px;
-text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.16px;
+    text-align: center;
 
 }
 
 
-.adaptive{
+.adaptive {
     display: none;
 }
-
 
 
 .adaptiveView {
     display: none;
-    color: #121df7 ;
+    color: #121df7;
     cursor: pointer;
 }
 
@@ -407,6 +408,7 @@ text-align: center;
     .navigation {
         display: none;
     }
+
     .burger-btn {
         display: flex;
         background-color: transparent;
@@ -427,6 +429,7 @@ text-align: center;
         border-radius: 10px;
         background-color: #ffffff;
     }
+
     .burger-wrapper {
         display: none;
         width: 100%;
@@ -449,6 +452,7 @@ text-align: center;
         width: 100%;
         padding: 20px;
     }
+
     .burger .navigation {
         display: flex;
         flex-wrap: wrap;
@@ -457,7 +461,6 @@ text-align: center;
     /* .burger-btn {
 
     } */
-
     .convert-section {
         flex-direction: column;
         gap: 50px;
@@ -474,7 +477,8 @@ text-align: center;
         align-items: center;
         gap: 40px;
     }
-    header,footer {
+
+    header, footer {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -494,9 +498,11 @@ text-align: center;
         align-items: start;
         gap: 40px;
     }
+
     .section h2 {
         font-size: 60px;
     }
+
     .course-item {
         padding: 20px;
     }
@@ -504,6 +510,7 @@ text-align: center;
     .name {
         font-size: 30px;
     }
+
     .desc {
         font-size: 20px;
     }
@@ -511,6 +518,7 @@ text-align: center;
     .form {
         padding: 20px;
     }
+
     .form-title {
         font-size: 25px;
         line-height: normal;
@@ -539,13 +547,16 @@ text-align: center;
         height: 60px;
         font-size: 20px;
     }
+
     .text-wrapper {
         font-size: 16px;
         line-height: normal;
     }
+
     .adaptiveView {
         display: block;
     }
+
     .adaptive-text {
         display: none;
     }
@@ -556,8 +567,7 @@ text-align: center;
     /* .convert-info {
 
     } */
-
-    .adaptive{
+    .adaptive {
         display: flex;
     }
 
@@ -569,6 +579,7 @@ text-align: center;
         font-size: 45px;
         text-align: center;
     }
+
     .section h2 {
         font-size: 45px;
         line-height: normal;
@@ -580,16 +591,20 @@ text-align: center;
         flex-direction: column;
         gap: 20px;
     }
+
     .name {
         font-size: 45px;
         text-align: center;
     }
+
     .footer-copy {
         font-size: 15px;
     }
+
     .convert-info {
         margin-top: 0;
     }
+
     .logo {
         font-size: 30px;
     }
@@ -608,8 +623,30 @@ text-align: center;
     .section h2 {
         font-size: 35px;
     }
-    .advantage-item p{
+
+    .advantage-item p {
         font-size: 30px;
     }
 }
 
+.captcha-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.captcha-block input {
+    width: unset;
+}
+
+.captcha {
+    border-radius: 10px;
+}
+
+.errorlist {
+    font-family: Roboto;
+    font-size: 29px;
+    color: #FFC701;
+    margin-top: 25px;
+}

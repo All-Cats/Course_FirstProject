@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'django_recaptcha',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Course_FirstProject.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -81,7 +78,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -101,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -113,7 +108,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -124,8 +118,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RECAPTCHA_PUBLIC_KEY = "6LfXpR4qAAAAALaSCaTQxf2zz7gRvNz9Suvvj9Le"
-RECAPTCHA_PRIVATE_KEY = "6LfXpR4qAAAAAJ35sSGOeaPffnhgn26LNbPiY4IU"
-RECAPTCHA_USE_SSL = True
-RECAPTCHA_REQUIRED_SCORE = 0.8
-RECAPTCHA_DOMAIN = 'yachanger.pro'
+CAPTCHA_IMAGE_SIZE = (200, 120)
+CAPTCHA_FONT_SIZE = 42
+CAPTCHA_LETTER_ROTATION = (-5, 5)
+CAPTCHA_FOREGROUND_COLOR = "#1C1C1C"
+CAPTCHA_LENGTH = 5
+# CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
