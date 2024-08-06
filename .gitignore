@@ -5,3 +5,4 @@ media
 static
 venv/
 db.sqlite3
+*.sock
